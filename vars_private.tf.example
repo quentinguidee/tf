@@ -1,0 +1,12 @@
+variable "vertex_urls" {
+  type    = map(string)
+  default = {
+    admin        = "admin.your-url.com",
+    auth         = "auth.your-url.com",
+    containers   = "containers.your-url.com",
+    monitoring   = "monitoring.your-url.com",
+    reverseproxy = "reverseproxy.your-url.com",
+    sql          = "sql.your-url.com",
+    tunnels      = "tunnels.your-url.com",
+  }
+}
