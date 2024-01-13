@@ -144,6 +144,23 @@ resource "kubernetes_ingress_v1" "vertex_ingress" {
         }
       }
     }
+
+    rule {
+      host = var.vertex_urls.client
+      http {
+        path {
+          backend {
+            service {
+              name = "vertex-client-vertex-client-service"
+              port {
+                number = 7018
+              }
+            }
+          }
+          path = "/"
+        }
+      }
+    }
   }
 }
 

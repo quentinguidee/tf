@@ -8,5 +8,6 @@ variable "vertex_urls" {
     reverseproxy = "reverseproxy.your-url.com",
     sql          = "sql.your-url.com",
     tunnels      = "tunnels.your-url.com",
+    client       = "your-url.com",
   }
 }
