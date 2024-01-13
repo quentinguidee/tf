@@ -202,36 +202,36 @@ resource "helm_release" "vertex_client" {
 
   set {
     name  = "configmap.VERTEX_AUTH_ADDR"
-    value = var.vertex_urls.auth
+    value = "http://${var.vertex_urls.auth}/api"
   }
 
   set {
     name  = "configmap.VERTEX_CONTAINERS_ADDR"
-    value = var.vertex_urls.containers
+    value = "http://${var.vertex_urls.containers}/api"
   }
 
   set {
     name  = "configmap.VERTEX_MONITORING_ADDR"
-    value = var.vertex_urls.monitoring
+    value = "http://${var.vertex_urls.monitoring}/api"
   }
 
   set {
     name  = "configmap.VERTEX_SQL_ADDR"
-    value = var.vertex_urls.sql
+    value = "http://${var.vertex_urls.sql}/api"
   }
 
   set {
     name  = "configmap.VERTEX_TUNNELS_ADDR"
-    value = var.vertex_urls.tunnels
+    value = "http://${var.vertex_urls.tunnels}/api"
   }
 
   set {
     name  = "configmap.VERTEX_ADMIN_ADDR"
-    value = var.vertex_urls.admin
+    value = "http://${var.vertex_urls.admin}/api"
   }
 
   set {
     name  = "configmap.VERTEX_REVERSEPROXY_ADDR"
-    value = var.vertex_urls.reverseproxy
+    value = "http://${var.vertex_urls.reverseproxy}/api"
   }
 }
