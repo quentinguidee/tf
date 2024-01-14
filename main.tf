@@ -182,6 +182,12 @@ resource "helm_release" "vertex_containers" {
   repository = var.vertex_repo
 }
 
+resource "helm_release" "vertex_containers_kernel" {
+  chart      = "vertex-containers-k"
+  name       = "vertex-containers-k"
+  repository = var.vertex_repo
+}
+
 resource "helm_release" "vertex_logs" {
   chart      = "vertex-logs"
   name       = "vertex-logs"
