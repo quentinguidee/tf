@@ -254,7 +254,7 @@ resource "helm_release" "vertex_client" {
   }
 
   set {
-    name  = "configmap.VERTEX_REVERSEPROXY_ADDR"
+    name  = "configmap.VERTEX_REVERSE_PROXY_ADDR"
     value = "http://${var.vertex_urls.reverseproxy}/api"
   }
 }
